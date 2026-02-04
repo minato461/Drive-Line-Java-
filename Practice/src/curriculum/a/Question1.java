@@ -4,23 +4,42 @@ public class Question1 {
 
 	public static void main(String[] args) {
 		// 変数byteNumの初期値を設定
-		byte byteNum = 10;
+		byte byteNum = 0;
 		// 変数shortNumの初期値を設定
-		short shortNum = 100;
+		short shortNum = 0;
 		// 変数intNumの初期値を設定
-		int intNum = 1000;
+		int intNum = 0;
 		// 変数longNumの初期値を設定
-		long longNum = 10000;
+		long longNum = 0L;
 		// 変数floatNumの初期値を設定
-		float floatNum = 9.5f;
+		float floatNum = 0.0f;
 		// 変数doubleNumの初期値を設定
-		double doubleNum = 10.5f;
+		double doubleNum = 0.0;
 		// 変数letterの初期値を設定
-		char letter = 'a';
+		char letter = '\u0000';
 		// 変数lettersの初期値を設定
-		String letters = "ハロー";
+		String letters = null;
 		// 変数isBooleanの初期値を設定
-		boolean isBoolean = true;
+		boolean isBoolean = false;
+		
+		// 変数byteNumに10を代入
+		byteNum = 10;
+		// 変数shortNumに100を代入
+		shortNum = 100;
+		// 変数intNumに1000を代入
+		intNum = 1000;
+		// 変数longNumに10000を代入
+		longNum = 10000;
+		// 変数floatNumに9.5fを代入
+		floatNum = 9.5f;
+		// 変数doubleNumに10.5を代入
+		doubleNum = 10.5;
+		// 変数letterに"a"を代入
+		letter = 'a';
+		// 変数lettersに"ハロー"を代入
+		letters = "ハロー";
+		// 変数isBooleanにtrueを代入
+		isBoolean = true;
 		
 		// 11110を出力
 		System.out.println(byteNum + shortNum + intNum + longNum);
@@ -53,7 +72,8 @@ public class Question1 {
 		
 		// 最終スコア: 100 をscoreを使用して表示
 		int score = 80;
-		System.out.println(score + 20);
+		score += 20;
+		System.out.println(score);
 		
 		// double型mで99.99を代入
 		double price1 = 99.99;
@@ -85,11 +105,8 @@ public class Question1 {
 		// int型変数xで15を代入
 		int x = 15;
 		// xが10以上なら"OK"、そうでなければ"NG"を表示
-		if (x >= 10) {
-			System.out.println("OK");
-		} else {
-			System.out.println("NG");
-		}
+		String newResult = (x >= 10) ? "OK" : "NG";
+		System.out.println(newResult);
 		
 		// Q13
 		String text = "私はJavaが好きです。Javaは楽しい！";
