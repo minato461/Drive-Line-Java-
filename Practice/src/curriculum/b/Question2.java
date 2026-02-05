@@ -100,6 +100,17 @@ public class Question2 {
 			System.out.println("不可");
 		}
 		
+		// Scannerの準備、String型変数textを用意
+				Scanner sc = new Scanner(System.in);
+				sc.nextLine();
+				System.out.println("数値を入力してください：");
+				String text = sc.nextLine();
+				//コンソール入力の制限：nullまたは空文字（""）のとき
+				if (text == null || text.isEmpty()) {
+					System.out.println("入力が無効です");
+				} else {
+					System.out.println("入力が有効です");
+				}
 		
 		// int 型変数dayを用意
 		System.out.println("数値を入力して下さい：");
