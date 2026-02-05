@@ -168,6 +168,7 @@ public class Question2 {
 		
 		// Scannerを閉じる
 		scanner.close();
+		sc.close();
 		
 		
 	}
