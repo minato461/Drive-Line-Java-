@@ -100,11 +100,11 @@ public class Question2 {
 			System.out.println("不可");
 		}
 		
-		// Scannerの準備、String型変数textを用意
-				Scanner sc = new Scanner(System.in);
-				sc.nextLine();
+		/* scanner.nextInt と scanner.nextLine の競合防止
+		 * String型変数textを用意 */
+				scanner.nextLine();
 				System.out.println("数値を入力してください：");
-				String text = sc.nextLine();
+				String text = scanner.nextLine();
 				//コンソール入力の制限：nullまたは空文字（""）のとき
 				if (text == null || text.isEmpty()) {
 					System.out.println("入力が無効です");
@@ -168,7 +168,6 @@ public class Question2 {
 		
 		// Scannerを閉じる
 		scanner.close();
-		sc.close();
 		
 		
 	}
