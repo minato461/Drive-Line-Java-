@@ -51,6 +51,10 @@ public class Question3 {
 			}
 				num2++;
 		}
+		/* 偶数表示はfor文での記載ができる
+		 * for (int i = 2; i <= 20; i += 2) {
+		 *  System.out.println(i);
+		 * }  */
 		
 		// 10〜1までカウトダウンする処理
 		int num3 = 10;
