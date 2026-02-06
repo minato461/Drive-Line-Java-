@@ -1,5 +1,7 @@
 package curriculum.b;
 
+//コンソール入力対応のため(Scannerを使用するため)
+import java.util.Scanner;
 public class Question3 {
 
 	public static void main(String[] args) {
@@ -66,11 +68,54 @@ public class Question3 {
 		}
 		System.out.println("1〜100までの合計：" + tt); 
 		
-		// Q10
+		// 0を入力するまでループする処理
+		Scanner scanner = new Scanner(System.in);
+		int num5;
+		do {
+			System.out.println("数値を入力してください：");
+			num5 = scanner.nextInt();
+		}while (num5 != 0);
+		System.out.println("終了しました");
 		
-		// Q11
+		scanner.close();
 		
+		// 九九表
+		for (int i = 1; i <= 9; i++) {
+			for (int j = 1; j <= 9; j++) {
+				// "%02d"で2桁表示
+				System.out.printf("%02d * %02d = %02d" + " || ", i, j, (i * j));
+			}
+			System.out.println();
+		}
 		
+		// Q12
+		// 商品一覧の定義
+		String input = "パソコン、冷蔵庫、扇風機、洗濯機、加湿器、テレビ、ディスプレイ、その他商品";
+		// 1単語ずつに分割
+		String[] name = input.split("、");
+		
+		// ランダムな整数の準備
+		java.util.Random rand = new java.util.Random();
+		
+		// 拡張for文
+		for (String str: name){
+			int num = rand.nextInt(12);
+			switch (str) {
+			case "パソコン":
+			case "冷蔵庫":
+			case "扇風機":
+			case "洗濯機":
+			case "加湿器":
+				System.out.println(str + "の残り台数は " + num + "台です");
+				break;
+			case "テレビ":
+			case "ディスプレイ":
+				System.out.println(str + "の残り台数は " + (str.equals("テレビ") ? num : 11-num) + "台です");
+				break;
+			default:
+				System.out.println("『" + str + "』" + "は指定の商品ではありません");
+				break;
+			}
+		}
 	}
-
 }
