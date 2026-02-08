@@ -95,8 +95,98 @@ public class Question4 {
 		
 		scanner.close();
 		
-		// Q7〜10までやったら削除
+		
+		// Q7
+		System.out.println("~Q7~");
+		// 2次元配列を用意
+		int[][] array7 = {
+				{1, 2},
+				{3, 4},
+				{5, 6}
+		};
 
+		// 全て表示(外側と内側で二重ループを使用)
+		for (int i = 0; i < array7.length; i++) {
+			for (int j = 0; j < array7[i].length; j++) {
+				System.out.print(array7[i][j] + " ");
+			}
+			System.out.println();
+		}
+		
+		
+		// Q8
+		System.out.println("~Q8~");
+		// 2次元配列を用意
+		int[][] array8 = {
+				{10, 20, 30},
+				{40, 50, 60},
+				{70, 80, 90}
+		};
+		
+		// 合計表示
+		int tt = 0;
+		
+		for (int i = 0; i < array8.length; i++) {
+			for (int j =0; j < array8.length; j++) {
+				tt += array8[i][j];
+			}
+		}
+		System.out.println("合計：" + tt);
+		
+		
+		// Q9
+		System.out.println("~Q9~");
+		// 2次元配列を用意
+		int[][] array9 = {
+				{12, 15, 8},
+				{6, 19, 25},
+				{30, 2, 10}
+		};
+		// 最大値と最小値の表示
+		int maxA = array9[0][0];
+		int minA = array9[0][0];
+		
+		for (int i = 0; i < array9.length; i++) {
+			for (int j =0; j < array9.length; j++) {
+				if(array9[i][j] > maxA) {
+					maxA = array9[i][j];
+				}
+				if(array9[i][j] < minA) {
+					minA = array9[i][j];
+				}
+			}
+		}
+		System.out.println("最大値：" + maxA);
+		System.out.println("最小値：" + minA);
+		
+		
+		// Q10
+		System.out.println("~Q10~");
+		// 3次元配列を用意
+		int[][][] array10 = {
+				{ // 1枚目の板のイメージ
+					{1, 2},
+					{3, 4}
+				},
+				{ // 2枚目の板のイメージ
+					{5, 6},
+					{7, 8}
+				}
+			};
+		
+		// 全てを表示(3つのfor文)
+		for (int[][] area : array10) {      
+			// 3次元から2次元(area)を取り出す
+			for (int[] row : area) {        
+				// 2次元から1次元(row)を取り出す
+				for (int value : row) {     
+					// 1次元から数値(value)を取り出す
+					System.out.print(value + " ");
+				}
+				System.out.println();
+			}
+			System.out.println();
+		}
+		
 	}
-
 }
