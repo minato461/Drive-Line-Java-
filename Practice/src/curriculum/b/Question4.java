@@ -127,7 +127,7 @@ public class Question4 {
 		int tt = 0;
 		
 		for (int i = 0; i < array8.length; i++) {
-			for (int j =0; j < array8.length; j++) {
+			for (int j =0; j < array8[i].length; j++) {
 				tt += array8[i][j];
 			}
 		}
@@ -147,7 +147,7 @@ public class Question4 {
 		int minA = array9[0][0];
 		
 		for (int i = 0; i < array9.length; i++) {
-			for (int j =0; j < array9.length; j++) {
+			for (int j =0; j < array9[i].length; j++) {
 				if(array9[i][j] > maxA) {
 					maxA = array9[i][j];
 				}
