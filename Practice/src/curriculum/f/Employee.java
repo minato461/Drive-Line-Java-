@@ -8,16 +8,4 @@ public class Employee {
 	public void showInfo() {
 		System.out.println("社員ID：" + employeeId + ",名前：" + name);
 	}
-
-	public static void main(String[] args) {
-		// インスタンス（オブジェクト）の作成
-		Employee emp = new Employee();
-		// フィールドに値を入れる
-		emp.employeeId = "E001";
-		emp.name = "佐藤太郎";
-		// メゾッドの呼び出し
-		emp.showInfo();
-
-	}
-
 }
