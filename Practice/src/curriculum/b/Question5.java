@@ -25,11 +25,31 @@ public class Question5 {
 			System.out.println(num1 + "は奇数です。");
 		}
 		
-		// Q4 メゾッド：
-		//printHeader(5);
+		// Q4
+		printHeader(4);
+		// Greetingクラスのインスタンス（実体）を作る 
+		Greeting greet = new Greeting();
+		// インスタンスのメゾッドを呼び出す
+		greet.sayHello();
 		
-		// Q5 メゾッド：
-		//printHeader(5);
+		// Q5
+		printHeader(5);
+		// Animalクラスのインスタンス（実体）を作る 
+		Animal animal = new Animal();
+		// インスタンスのメゾッドを呼び出す
+		/* 動物名(name)：ライオン
+		 * 体長(length)：2.1m
+		 * 速度(speed)：80km/h */
+		
+		// 中身を決めて窓口（setter）を入れ込む
+		animal.setName("ライオン");
+		animal.setLength(2.1);
+		animal.setSpeed(80);
+		
+		// 窓口（getter）から中身の表示
+		System.out.println("動物名：" + animal.getName());
+		System.out.println("体長：" + animal.getLength() + "m");
+		System.out.println("速度：" + animal.getSpeed() + "km/h");
 		
 	}
 	// Qの表示用
