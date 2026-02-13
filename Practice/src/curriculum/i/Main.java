@@ -13,7 +13,7 @@ public class Main {
 		employeeList.add(new FullTimeEmployee("F001", "田中"));
 		employeeList.add(new ContractEmployee("C001", "鈴木"));
 		employeeList.add(new FullTimeEmployee("F002", "佐藤"));
-		employeeList.add(new ContractEmployee("F002","高橋"));
+		employeeList.add(new ContractEmployee("C002","高橋"));
 		
 		// for-eachループで各社員の給料を出力
 		// 共通のEmployee型で実装
@@ -21,7 +21,7 @@ public class Main {
 			int hours = 9;
 			int wage = emp.calculateDailyWage(hours);
 			
-			System.out.println(emp.name + "さんの給料：" + wage + "円");
+			System.out.println(emp.getName() + "さんの給料：" + wage + "円");
 		}
 
 	}
