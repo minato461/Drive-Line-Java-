@@ -18,7 +18,7 @@ public class Main {
 		// for-eachループで各社員の給料を出力
 		// 共通のEmployee型で実装
 		for (Employee emp : employeeList) {
-			int hours = 8;
+			int hours = 9;
 			int wage = emp.calculateDailyWage(hours);
 			
 			System.out.println(emp.name + "さんの給料：" + wage + "円");
