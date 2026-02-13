@@ -12,7 +12,7 @@ public abstract class Employee {
 	}
 	
 	// フィールドを外から確認できるようにする
-	public String getEmployeeID() {
+	public String getEmployeeId() {
 		return employeeId;
 	}
 	
@@ -21,6 +21,6 @@ public abstract class Employee {
 	}
 	
 	// 抽象メゾッドの指定
-	public abstract int calculateDailyWage(int hoursWorks);
+	public abstract int calculateDailyWage(int hoursWorked);
 
 }
