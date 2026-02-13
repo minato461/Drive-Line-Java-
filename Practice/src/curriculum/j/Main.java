@@ -6,21 +6,20 @@ import java.util.List; // リストという概念（インターフェイス）
 
 public class Main {
 	public static void main(String[] args) {
-		// 社員リスト(List<Billable>)を作成
-		List<Billable> billableList = new ArrayList<>();
+		// Employeeでインターフェイスの実装しているため
+		// 社員リスト(List<Employee>)を作成
+		List<Employee> employeeList = new ArrayList<>();
 		
 		// リストに各社員を追加
-		billableList.add(new FullTimeEmployee("F001", "田中"));
-		billableList.add(new ContractEmployee("C001", "鈴木"));
+		employeeList.add(new FullTimeEmployee("F001", "田中"));
+		employeeList.add(new ContractEmployee("C001", "鈴木"));
 		
 		// for-eachループで各社員の給料を出力
-		// 共通のBillable型で実装
-		for (Billable b : billableList) {
+		// 共通のEmployee型で実装
+		for (Employee emp : employeeList) {
 			int hours = 9;
-			int cost = b.costForDay(hours);
-			
-			// Billable型をEmployee型に「キャスト」して名前を取得
-			Employee emp = (Employee) b; 
+			int cost = emp.costForDay(hours);
+			 
 			System.out.println(emp.getName() + "さんの日給：" + cost + "円");
 		}
 
