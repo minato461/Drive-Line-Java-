@@ -1,10 +1,14 @@
 package curriculum.c;
 
+import java.util.Scanner;
 public class Question6 {
 
 	public static void main(String[] args) {
+		// Scannerの準備
+		Scanner sc = new Scanner(System.in);
+		
 		// 対戦相手を作る
-		HumanPlayer player = new HumanPlayer("プレイヤー");
+		HumanPlayer player = new HumanPlayer("プレイヤー", sc);
 		RandomCPU cpu = new RandomCPU("CPU");
 		
 		// 数字を名前に変える配列
@@ -35,7 +39,7 @@ public class Question6 {
 			}
 			System.out.println();
 		}
-
+		sc.close();
 	}
 
 }
