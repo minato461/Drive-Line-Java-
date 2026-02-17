@@ -56,6 +56,7 @@ public class Question7 {
 		}
 		String winner = player.isAlive() ? player.getName() : daemon.getName();
 		System.out.println(winner + "の勝利");
+		saveLog(winner);
 	}
 		
 	// メゾッド(loadDaemon)：staticをつけてMainから呼び出せるようにする
@@ -76,7 +77,7 @@ public class Question7 {
 	
 	// ログ出力
 	public static void saveLog(String winnerName) {
-		try (PrintWriter pw = new PrintWriter(new FileWriter("battle_log.txt", true))) {
+		try (PrintWriter pw = new PrintWriter(new FileWriter("src/curriculum/d/battle_log.txt", true))) {
 			pw.println("バトルの結果: " + winnerName + " が勝利しました");
 		} catch (Exception e) {
 			System.out.println();
