@@ -10,12 +10,13 @@ import java.util.Scanner;
 public class Question7 {
 
 	public static void main(String[] args) {
+		Random rand = new Random();
 		Scanner sc = new Scanner(System.in);
 		
 		// プレイヤーの作成
 		System.out.println("プレイヤーの名前を入力してください：");
 		String playerName = sc.nextLine();
-		Player player = new Player(playerName);
+		Player player = new Player(playerName ,rand);
 		
 		// 敵の作成
 		Daemon daemon = loadDaemon("src/curriculum/d/daemon_status.txt");
@@ -32,12 +33,12 @@ public class Question7 {
 		
 		// バトル実行
 		Character first, second;
-		if(player.sp > daemon.sp) {
+		if(player.getSp() > daemon.getSp()) {
 			first = player; second = daemon;
-		}else if(daemon.sp > player.sp) {
+		}else if(daemon.getSp() > player.getSp()) {
 			first = daemon; second = player;
 		}else {
-			if(new Random().nextBoolean()) {
+			if(rand.nextBoolean()) {
 				first = player; second = daemon;
 			}else {
 				first = daemon; second = player;

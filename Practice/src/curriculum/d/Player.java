@@ -2,11 +2,11 @@ package curriculum.d;
 
 import java.util.Random;
 public class Player extends Character {
-	public Player(String name) {
+	public Player(String name, Random rand) {
 		super(name, 
-				new Random().nextInt(51) + 50, 
-				new Random().nextInt(11) + 10, 
-				new Random().nextInt(10) + 1);	
+				rand.nextInt(51) + 50, 
+				rand.nextInt(11) + 10, 
+				rand.nextInt(10) + 1);	
 	}
 
 }
